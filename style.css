@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    background-color: rgb(72, 119, 119);
+}
+
+.wrapper{
+    background-color: #FFF;
+    width: 80vmin;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.opt-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+label{
+    display: block;
+}
+span{
+    position: relative;
+    font-size: 22px;
+    bottom: -1px;
+}
+
+button{
+    background-color: rgb(88, 140, 140);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFF;
+    cursor: pointer;
+}
+button:hover{
+     background-color: rgb(83, 148, 148);
+}
+button:active{
+    transform: scale(1.02);
+}
+
+input[type="color"]{
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance: none;
+    background-color: transparent;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch{
+    border-radius: 8px;
+    border: 4px solid black;
+}
+input[type="color"]::-moz-color-swatch{
+    border-radius: 8px;
+    border: 4px solid black;
+}
+
+.gridCol{
+    height: 1em;
+    width: 1em;
+    border: 1px solid #ddd;
+}
+
+.gridRow{
+    display: flex;
+}
+
+@media only screen and (max-width:768px){
+    body{
+        background-color: #FFF;
+    }
+    .wrapper{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gridCol{
+        height: 0.9em;
+        width: 0.9em;
+    }
+}
