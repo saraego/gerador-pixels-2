@@ -5,7 +5,7 @@ let gridWidth = document.getElementById("width-range");//ok
 let gridHeight = document.getElementById("height-range");//ok
 let colorButton = document.getElementById("color-input")//ok
 let eraseBtn = document.getElementById("erase-btn")//ok
-let paintBtn = document.getElementById("paint-btn")
+let paintBtn = document.getElementById("paint-btn")//ok
 let widthValue = document.getElementById("width-value");//ok
 let heightValue = document.getElementById("height-value");//ok
 
@@ -18,7 +18,7 @@ let events = {
     },
     touch:{
         down:"touchstart",
-        mobe: "touchmove",
+        move: "touchmove",
         up : "touchend"
     }
 };
@@ -28,7 +28,7 @@ let deviceType = "";
 let draw = false;
 let erase = false;
 
-const isToucheDevice =()=>{
+const isToucheDevice =()=>{// verifica se o dispositivo do usuário suporta eventos de toque (touch) ou se é necessário usar um mouse.
     try{
         document.createEvent("TouchEvent");
         deviceType = "touch"
@@ -41,7 +41,7 @@ const isToucheDevice =()=>{
 
 isToucheDevice()
 
-gridButtonCreate.addEventListener("click",()=>{
+gridButtonCreate.addEventListener("click",()=>{// responsavel de criar as linhas e colunas 
     container.innerHTML = "";
     console.log("ola");
     let count = 0;
